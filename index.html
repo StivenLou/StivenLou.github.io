@@ -11,6 +11,9 @@
     <!-- Bootstrao Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
 
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
 
@@ -50,7 +53,7 @@
     <section class="jumbotron text-center">
       <img src="img/oie_png.png" alt="Alexander Steven Marselinus" width="300" />
       <h1 class="display-4">Alexander Steven Marselinus</h1>
-      <p class="lead">Mahasiswa IDE LPKIA</p>
+      <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#fff"
@@ -63,14 +66,14 @@
 
     <!-- About -->
     <section id="about">
-      <div class="container">
+      <div class="container" >
         <div class="row text-center mb-3">
           <div class="col">
             <h2>About Me</h2>
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-start">
-          <div class="col-md-6">
+          <div class="col-md-6" data-aos="fade-up" data-aos-duration="1000">
             <p>
               <br />Nama    : Alexander Steven Marselinus<br />
               <br />Usia          : 22 Tahun<br />
@@ -80,7 +83,7 @@
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
             <p>
                 <h2>Hobi</h2>
             </p>
@@ -92,7 +95,7 @@
                 <li class="list-group-item"><i class="icofont-fast-food"> Makan</i></li>
               </ol>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
             <p>
                 <h2>Edukasi</h2>
             </p>
@@ -101,7 +104,7 @@
                 <li class="list-group-item"><i class="icofont-school-bag"></i> 2019-... : IDE LPKIA</li>
               </ol>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
             <p>
                 <h2>Pengalaman Kerja</h2>
             </p>
@@ -131,14 +134,14 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500">
               <img src="projects/Project1.png" class="card-img-top" alt="Project1" />
               <div class="card-body">
                 <p class="card-text">Sistem Penjualan Barang Elektronik Milik PT Anugrah Jaya</p>
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3" data-aos="flip-right" data-aos-duration="500" data-aos-delay="100">
             <div class="card">
               <img src="projects/Project2.png" class="card-img-top" alt="Project2" />
               <div class="card-body">
@@ -146,7 +149,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3" data-aos="flip-up" data-aos-duration="500" data-aos-delay="150">
             <div class="card">
               <img src="projects/Project3.png" class="card-img-top" alt="Project3" />
               <div class="card-body">
@@ -215,11 +218,33 @@
 
     <!-- Footer -->
     <footer class="bg-primary text-white text-center pb-5">
-      <p>Created with <i class="bi bi-balloon-heart-fill text-danger"></i> by <a href="https://www.facebook.com/spsiko.spsiko/" class="text-white fw-bold">Alexander Steven Marselinus</a></p>
+      <p class="footer"></p>
     </footer>
     <!-- Akhir Footer -->
+
+    <!-- Audio -->
+    <audio autoplay loop src="audio/Blue Zones.mp3" type="audio/mpeg"></audio>
+    <!-- Akhir Audio -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+      });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/TextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to('.footer', {duration: 3, delay: 5, text: 'Created with <i class="bi bi-balloon-heart-fill text-danger"></i> by <a href="https://www.facebook.com/spsiko.spsiko/" class="text-white fw-bold">Alexander Steven Marselinus</a>'});
+      gsap.to('.lead', {duration: 2, delay: 1.5, text: 'Network Technician | Web Designer'});
+      gsap.from('.jumbotron img', {duration: 1, rotateX: 360, opacity: 0});
+      gsap.from('.navbar', { duration: 1.5, y: '-100%', opacity: 0, ease: 'bounce' });
+      gsap.from('.display-4', { duration: 1, x: -50, opacity: 0, delay: 0.5, ease: 'back' });
+    </script>
+
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycby3caLZ_1CHSOhrPilOHKY3H0CS1vwdstUP1W3CcLCGmnNKtTMTLu474GBRoTf0It1Bug/exec'
       const form = document.forms['contact-form']
