@@ -163,6 +163,48 @@
           </div>
         </div>
       </div>
+
+      <section id="my-project">
+        <div class="container">
+          <div class="row">
+            <div class="row text-center mb-3">
+              <div class="col">
+                <h2>My Projects 3D</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="project-box">
+                <h4 class="project-name">
+                  Sistem Penjualan Barang Elektronik Milik PT Anugrah Jaya
+                </h4>
+                <img src="projects/Project1.png" alt="Sistem Penjualan Barang Elektronik Milik PT Anugrah Jaya" class="project-img">
+                <a href="projects/Project1.png" target='_blank' class="btn btn-light project-detail-btn">Show Details</a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="project-box">
+                <h4 class="project-name">
+                  Sistem Kasir Boba Drink Alex
+                </h4>
+                <img src="projects/Project2.png" alt="Sistem Kasir Boba Drink Alex" class="project-img">
+                <a href="projects/Project2.png" target='_blank' class="btn btn-light project-detail-btn">Show Details</a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="project-box">
+                <h4 class="project-name">
+                  Sistem Informasi Kependudukan Kecamatan Cangkuang
+                </h4>
+                <img src="projects/Project3.png" alt="Sistem Informasi Kependudukan Kecamatan Cangkuang" class="project-img">
+                <a href="projects/Project3.png" target='_blank' class="btn btn-light project-detail-btn">Show Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#FFFFFF"
@@ -172,6 +214,65 @@
       </svg>
     </section>
     <!-- Akhir Projects -->
+
+    <!-- Gallery -->
+    <section id="gallery">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2>Gallery</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-3">
+            <a href="#">
+              <img src="gallery/01_Pas Foto.jpg" alt="Pas Foto" class="img-fluid gallery-img">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="gallery/02_Foto Grup-01.jpeg" alt="Foto Grup-01" class="img-fluid gallery-img">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="gallery/03_Foto Grup-02.jpg" alt="Foto Grup-02" class="img-fluid gallery-img">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="gallery/05_Liburan di Dusun Bambu Lembang di Bandung.jpg" alt="Liburan 1" class="img-fluid gallery-img">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="gallery/06_Liburan di Floating Market.JPG" alt="Liburan 2" class="img-fluid gallery-img">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="gallery/07_Menjadi PagarAyu atau PagarBagus di Kawinan Paman.jpg" alt="Liburan 3" class="img-fluid gallery-img">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="gallery/08_Pulang Kampung Merayakan Peringatan 1 Tahun Meninggal Kakek.jpg" alt="Kerabat Meninggal" class="img-fluid gallery-img">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="gallery/09_Kedatangannya Bibi ke Kab. Bandung.jpg" alt="Liburan 4" class="img-fluid gallery-img">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="gallery/10_Liburan Ke Pangandaran.jpg" alt="Liburan 5" class="img-fluid gallery-img">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Akhir Gallery -->
 
     <!-- Contact -->
     <section id="contact">
@@ -210,6 +311,9 @@
           </div>
         </div>
       </div>
+
+
+
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#0d6efd"
@@ -231,6 +335,14 @@
     
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
+      const galleryImage = document.querySelectorAll('.gallery-img');
+
+      galleryImage.forEach((img, i) => {
+        img.dataset.aos = 'fade-down';
+        img.dataset.aosDelay = i * 100;
+        img.dataset.aosDuration = 1000;
+      });
+
       AOS.init({
         once: true,
       });
@@ -273,6 +385,15 @@
           })
           .catch(error => console.error('Error!', error.message))
       })
+    </script>
+
+    <script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelectorAll(".project-box"), {
+        max: 35,
+        speed: 600,
+        glare: true,
+      });
     </script>
   </body>
 </html>
